@@ -101,8 +101,8 @@
                 <div id="collapseCondominium" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opções:</h6>
-                        <a class="collapse-item" href="buttons.html"><b><i class="fa-solid fa-list"></i> Lista de Condomínios</b></a>
-                        <a class="collapse-item" href="cards.html"><b><i class="fa-solid fa-circle-plus"></i> Novo Condomínio</b></a>
+                        <a class="collapse-item" href="{{ route('condominios.index') }}"><b><i class="fa-solid fa-list"></i> Lista de Condomínios</b></a>
+                        <a class="collapse-item" href="{{ route('condominios.create') }}"><b><i class="fa-solid fa-circle-plus"></i> Novo Condomínio</b></a>
                     </div>
                 </div>
             </li>

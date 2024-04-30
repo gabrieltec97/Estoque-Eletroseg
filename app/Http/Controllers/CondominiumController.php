@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Condominium;
 use Illuminate\Http\Request;
 
 class CondominiumController extends Controller
@@ -11,7 +12,10 @@ class CondominiumController extends Controller
      */
     public function index()
     {
-        //
+        //$condominiums = Condominium::query()->paginate('5');
+        $condominiums = Condominium::all();
+
+        return view('Condominium.condominiums-management', compact('condominiums'));
     }
 
     /**
@@ -19,7 +23,10 @@ class CondominiumController extends Controller
      */
     public function create()
     {
-        //
+
+        //$condominiums = Condominium::query()->paginate('5');
+        $condominiums = Condominium::all();
+        return view('Condominium.New-Condominium', compact('condominiums'));
     }
 
     /**
@@ -27,7 +34,11 @@ class CondominiumController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $condominium = new Condominium();
+        $condominium->name = ucwords($request->condominium);
+        $condominium->save();
+
+        return redirect()->back();
     }
 
     /**

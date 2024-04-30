@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CondominiumController;
 use App\Http\Controllers\StatisticsController;
 use Illuminate\Support\Facades\Route;
 
@@ -8,3 +9,5 @@ Route::get('/', function () {
 });
 
 Route::get('estatisticas', [StatisticsController::class, 'home'])->name('estatisticas');
+
+Route::resource('condominios', CondominiumController::class);

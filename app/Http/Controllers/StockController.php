@@ -11,7 +11,7 @@ class StockController extends Controller
      */
     public function index()
     {
-        //
+        return view ('Stock.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class StockController extends Controller
      */
     public function create()
     {
-        //
+        return view ('Stock.management');
     }
 
     /**

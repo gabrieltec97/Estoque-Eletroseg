@@ -58,12 +58,20 @@
                 </a>
             </li>
 
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#"
-                   aria-expanded="true">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStock"
+                   aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fa-solid fa-boxes-stacked"></i>
                     <span>Estoque</span>
                 </a>
+                <div id="collapseStock" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Ações:</h6>
+                        <a class="collapse-item" href="{{ route('estoque.index') }}"><i class="fa-solid fa-list"></i><b> Estoque Disponível</b></a>
+                        <a class="collapse-item" href="{{ route('estoque.create') }}"><i class="fa-solid fa-circle-plus"></i> <b>Gerenciamento</b></a>
+                    </div>
+                </div>
             </li>
 
             <!-- Divider -->
